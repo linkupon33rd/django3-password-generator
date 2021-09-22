@@ -1,0 +1,40 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<div class="container text-center">
+    <br>
+    <h1>Password Generator</h1>
+
+    <form action="{% url 'password' %}">
+        <div>
+            <br>
+            <label for="number of characters" class="fs-5">Number of Characters:</label>
+            <select name="length" id="number of characters">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14" selected="selected">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+            </select>
+            <br>
+        </div>
+
+        <div>
+            <br>
+            <h5>Include:</h5>
+            <input type="checkbox" name="uppercase" /> Uppercase Letters
+            <br>
+            <input type="checkbox" name="numbers" /> Numbers
+            <br>
+            <input type="checkbox" name="special" /> Special Characters
+        </div>
+
+        <div>
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>
